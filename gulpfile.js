@@ -1,4 +1,7 @@
 var elixir = require('laravel-elixir');
+
+require( 'elixir-jshint' );
+ 
 /**
  destination folder
  **/
@@ -14,6 +17,12 @@ elixir.config.js.browserify.transformers.push({
     options: {}
 });
 
+elixir( function( mix ){
+    mix.jshint( ['js/**/*.js', '!js/vendor/*.js'], {
+        lookup: true, // default is true 
+        linter: 'jshint' // default is "jshint" 
+    });
+});
 
 elixir(function(mix) {
     mix.sass('app.scss', dest + 'css/style.css');
