@@ -1,5 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function (global){
 /**
  * marked - a markdown parser
  * Copyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)
@@ -1285,48 +1283,3 @@ if (typeof module !== 'undefined' && typeof exports === 'object') {
 }).call(function() {
   return this || (typeof window !== 'undefined' ? window : global);
 }());
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],2:[function(require,module,exports){
-'use strict';
-
-var marked = require('marked');
-marked.setOptions({
-	renderer: new marked.Renderer()
-});
-
-console.log(marked('markdown héhé'));
-
-var myCodeMirror = CodeMirror(document.body, {
-	value: "hello, write here",
-	mode: "javascript"
-});
-
-// function debut(){
-// // var myCodeMirror = CodeMirror(document.body);
-// var entree = CodeMirror.fromTextArea(document.getElementById("#entree"), {
-// 	lineNumbers: true,
-// 	matchBrackets: true,
-// 	autofocus: true
-// });
-
-// // myCodeMirror.on('change', update);
-
-// function submit_html(){
-// 	$("#entree").on('click', function(){
-// 		var texte = entree.getValue();
-
-// 	});
-// // 	entree.save();
-// // 	var texte = document.getElementById("#entree").value;
-// // 	var data_url = "data:text/html;charset=utf-8;base64," + $.base64.encode(texte);
-// // 	document.getElementById("texte-html").src = data;
-// // }
-// function debutTexte(){
-// 	var texte = getElementById('texte-html');
-// };
-// };
-
-},{"marked":1}]},{},[2]);
-
-//# sourceMappingURL=bundle.js.map

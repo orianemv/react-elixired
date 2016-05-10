@@ -20,7 +20,17 @@ textarea {
 	bottom: 0;
 	left: 50%;
 	right: 0;
-	// overflow: auto;
+	overflow: auto;
+}
+.CodeMirror-scroll {
+    overflow: scroll;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 0;
+    width: 50%;
+    height: 100%;
+    outline: none;
+    position: fixed;
 }
 
 button{

@@ -1,4 +1,19 @@
 body {
-  background-color: teal; }
+  background-color: teal;
+  color: white;
+  margin: 0; }
+
+textarea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  font-size: 1.3em;
+  text-align: left; }
+
+#texte-html {
+  overflow: auto; }
 
 /*# sourceMappingURL=style.css.map */
