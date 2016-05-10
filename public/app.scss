@@ -8,31 +8,34 @@ textarea {
 	top: 0;
 	left: 0;
 	width: 50%;
-	height: 100%;
+	height: 70%;
 	overflow: auto;
 	font-size: 1.3em;
 	text-align: left;
 }
 
-#texte-html {
+#textemkd {
 	position: fixed;
+	height: 70%;
 	top: 0;
 	bottom: 0;
 	left: 50%;
 	right: 0;
 	overflow: auto;
 }
-.CodeMirror-scroll {
-    overflow: scroll;
-    bottom: 0;
-    right: 0;
-    padding-bottom: 0;
-    width: 50%;
-    height: 100%;
-    outline: none;
-    position: fixed;
-}
+// .CodeMirror-scroll {
+//     overflow: scroll;
+//     bottom: 0;
+//     right: 0;
+//     padding-bottom: 0;
+//     width: 50%;
+//     height: 70%;
+//     outline: none;
+//     position: fixed;
+// }
 
-button{
+input{
+	width: 4em;
+	height: 6em;
 	border: 1px solid teal;
 }

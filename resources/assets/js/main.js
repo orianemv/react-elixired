@@ -12,23 +12,35 @@ var myCodeMirror = CodeMirror(document.body, {
   mode:  "javascript"
 });
 
-// function debut(){
-// // var myCodeMirror = CodeMirror(document.body);
-// var entree = CodeMirror.fromTextArea(document.getElementById("#entree"), {
-// 	lineNumbers: true,
-// 	matchBrackets: true,
-// 	autofocus: true
-// });
-
+function debut(){
+var textemd = CodeMirror.fromTextArea(document.getElementById("#entree"), {
+	value: "write markdown",
+	mode: "text/x-markdown",
+	lineNumbers: true,
+	matchBrackets: true,
+	autofocus: true
+})
+	textemd.refresh();
+	getText(textemd);
+};
 
 // // myCodeMirror.on('change', update);
 
 
-// function submit_html(){
-// 	$("#entree").on('click', function(){
-// 		var texte = entree.getValue();
+function submit_html(debut){
+	$("#entree").on('click', function(){
+		var text = textemd.getValue();
+		markdownToHtml(text);
+	});
+};
+function ecrireTexte{
+	$("#entree").html(text);
+};
+function markdownToHtml(text){
+    var text = marked(text);
+    setText(text);
+};
 
-// 	});
 // // 	entree.save();
 // // 	var texte = document.getElementById("#entree").value;
 // // 	var data_url = "data:text/html;charset=utf-8;base64," + $.base64.encode(texte);
@@ -38,5 +50,6 @@ var myCodeMirror = CodeMirror(document.body, {
 // 	var texte = getElementById('texte-html');
 // };
 // };
+debut();
 
 

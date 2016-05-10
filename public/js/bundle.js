@@ -1302,13 +1302,16 @@ var myCodeMirror = CodeMirror(document.body, {
 	mode: "javascript"
 });
 
-// function debut(){
-// // var myCodeMirror = CodeMirror(document.body);
-// var entree = CodeMirror.fromTextArea(document.getElementById("#entree"), {
-// 	lineNumbers: true,
-// 	matchBrackets: true,
-// 	autofocus: true
-// });
+function debut() {
+	var textemd = CodeMirror.fromTextArea(document.getElementById("#entree"), {
+		value: "write markdown",
+		mode: "text/x-markdown",
+		lineNumbers: true,
+		matchBrackets: true,
+		autofocus: true
+	});
+	textemd.refresh();
+};
 
 // // myCodeMirror.on('change', update);
 
