@@ -4,23 +4,20 @@
 	<meta charset="UTF-8">
 	<title>Html all the things !</title>
 <!-- 	<link rel="stylesheet" href="/css/style.css">
- -->	<link rel="stylesheet" type="text/css" href="app.scss">
+ --><link rel="stylesheet" type="text/css" href="app.scss">
 	<link rel="stylesheet" type="text/css" href="codemirror.css">
 </head>
 <body>
-      <form>
-		<textarea id ="entree">
-			# hello
+	<form>
+		<textarea name="textarea" rows="10" cols="50" id ="entree">
 		</textarea>
-	<div id="textemkd">
-	</div> 
-       </form>
-		<input type="submit" value="envoyer"/>
+<!-- 		<button type="submit" name="submit" value="submit"> envoyer </button>
+ --></form>
+	<div id="textemkd"></div> 
 
-
+	<script src="marked.js"></script>
 	<script type="text/javascript" src="codemirror.js"></script>
 	<script type="text/javascript" src="jquery.js"></script>
-	<script src="marked.js"></script>
 	<script type="text/javascript" src="markdown.js"></script>
 	<script src="js/bundle.js"></script>
 </body>

@@ -1,5 +1,5 @@
 body {
-	background-color:teal;
+	background-color:white;
 	color:white;
 }
 
@@ -8,31 +8,30 @@ textarea {
 	top: 0;
 	left: 0;
 	width: 50%;
-	height: 70%;
+	height: 90%;
 	overflow: auto;
 	font-size: 1.3em;
 	text-align: left;
 }
 
-#textemkd {
+div#textemkd {
 	position: fixed;
-	height: 70%;
+	height: 90%;
 	top: 0;
 	bottom: 0;
 	left: 50%;
 	right: 0;
-	overflow: auto;
+	outline: none;
+	overflow: scroll;
 }
-// .CodeMirror-scroll {
-//     overflow: scroll;
-//     bottom: 0;
-//     right: 0;
-//     padding-bottom: 0;
-//     width: 50%;
-//     height: 70%;
-//     outline: none;
-//     position: fixed;
-// }
+.CodeMirror-scroll {
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 90%;
+    outline: none;
+    position: fixed;
+}
 
 input{
 	width: 4em;

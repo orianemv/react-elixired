@@ -1,7 +1,8 @@
 {
   "private": true,
   "devDependencies": {
-    "gulp": "^3.8.8"
+    "gulp": "^3.8.8",
+    "jshint": "^2.9.2"
   },
   "dependencies": {
     "babel-preset-react": "^6.5.0",

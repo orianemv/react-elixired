@@ -1,55 +1,86 @@
-var marked = require('marked');
-	marked.setOptions({
-		renderer : new marked.Renderer(),
-	});
+$(document).ready(function(){
 
-console.log(marked('markdown héhé'));
+// var marked = require('marked');
+// 	marked.setOptions({
+// 		renderer : new marked.Renderer(),
+// 	});
+
+console.log(marked('markdown'));
+
+// // var code = $("#entree")[0];
+// // var editor = CodeMirror.fromTextArea(code, {
+// // 	value: "write markdown",
+// // 	mode: "text/x-markdown",
+// // 	lineNumbers: true,
+// // 	matchBrackets: true,
+// // 	autofocus: true
+
+// // });
+
+// // alert(editor.getValue());
+
+// // function lireTexte(){
+// // 	var text = editor.getValue();
+// // 	alert(text);
+// // }
+
+// // var myCodeMirror = CodeMirror(document.body, {
+// //   value: "hello, write here",
+// //   mode:  "javascript"
+// // });
 
 
+// // var codem = entree.getCode();
 
-var myCodeMirror = CodeMirror(document.body, {
-  value: "hello, write here",
-  mode:  "javascript"
-});
+// function debut(){
 
-function debut(){
-var textemd = CodeMirror.fromTextArea(document.getElementById("#entree"), {
-	value: "write markdown",
-	mode: "text/x-markdown",
-	lineNumbers: true,
-	matchBrackets: true,
-	autofocus: true
-})
-	textemd.refresh();
-	getText(textemd);
-};
-
+// var code = $("#entree")[0];
+// var textemd = CodeMirror.fromTextArea(code, {
+// 	value: "write markdown",
+// 	mode: "text/x-markdown",
+//  	lineNumbers: true,
+//  	matchBrackets: true,
+//  	autofocus: true
+// })
+// 	textemd.refresh();
+// 	getValue(textemd);
+// };
+// console.log("textemd");
+// function getHtml(debut){
+// 	$("#entree").on('click', function(){
+// 		var text = code.getValue();
+// 		markdownToHtml(text);
+// 	});
+// };
+// function ecrireTexte(){
+// 	$("#textemkd").html(text);
+// };
+// function markdownToHtml(text){
+//     var text = marked(text);
+//     setText(text);
+// };
 // // myCodeMirror.on('change', update);
 
+// // function debutTexte(){
+// // 	var texte = getElementById('#entree');
+// // };
 
-function submit_html(debut){
-	$("#entree").on('click', function(){
-		var text = textemd.getValue();
-		markdownToHtml(text);
+// debut();
+
+// });
+
+// $('#entree').focus();
+var editor = CodeMirror.fromTextArea(document.getElementById('entree'), {
+	value: "write markdown",
+	mode: "text/x-markdown",
+ 	lineNumbers: true,
+ 	matchBrackets: true,
+ 	autofocus: true
 	});
-};
-function ecrireTexte{
-	$("#entree").html(text);
-};
-function markdownToHtml(text){
-    var text = marked(text);
-    setText(text);
-};
-
-// // 	entree.save();
-// // 	var texte = document.getElementById("#entree").value;
-// // 	var data_url = "data:text/html;charset=utf-8;base64," + $.base64.encode(texte);
-// // 	document.getElementById("texte-html").src = data;
-// // }
-// function debutTexte(){
-// 	var texte = getElementById('texte-html');
-// };
-// };
-debut();
-
-
+console.log("editor");
+setInterval(function modifTexte(){
+	var tex= editor.getValue();
+	document.getElementById('textemkd').innerHtml = marked (tex);
+}, 1500);
+// setInterval();
+});
